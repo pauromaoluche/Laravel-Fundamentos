@@ -1,0 +1,34 @@
+--
+App/console
+	Responsavel por rodar comandos de terminal
+--
+
+--
+/Execptions
+	Responsavel pelas exeções da aplicação, e o Hundler.php responsavel por tratar as exeções
+--
+
+--
+/Providers
+	Responsavel por utilziar serviços externos, exemplo, cpf, cep etc...
+--
+
+--
+/Config
+	Responsavel pelas configurações do laravel
+--
+
+--
+/Public
+	Responsavel por todos arquivos publicos da aplicação
+--
+
+--
+/Routes
+	Responsaveis pelas rotas do projeto, rotas de api, web, console, channel
+--
+
+--
+/Storage
+	Responsaveis por arquivos ex arquivos upodos
+--
