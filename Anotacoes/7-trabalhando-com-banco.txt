@@ -1,0 +1,4 @@
+--
+Comando para migrar o banco
+    php artisan migrate
+--
