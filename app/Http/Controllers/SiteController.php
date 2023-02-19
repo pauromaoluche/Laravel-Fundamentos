@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function index(){
-        echo "Conteudo dinamico Home";
+        return view('home');
     }
 
     public function sobre(){
