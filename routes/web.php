@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,43 +18,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    echo "Conteudo dinamico Home";
-});
+Route::get('/', [SiteController::class, 'index']);
 
-Route::get('/sobre', function () {
-    echo "Conteudo dinamico Sobre";
-});
+Route::get('/sobre', [SiteController::class, 'sobre']);
 
-Route::get('/contato', function () {
-    echo "Conteudo dinamico Contato";
-});
+Route::get('/contato', [SiteController::class, 'contato']);
 
-Route::get('/servicos/{id}', function (int $id) {
-    echo "Estou mostrando o serviço com id $id";
 
-    $servicos = [
-        1 =>[
-            'nome' => 'Lavagem de roupa',
-            'descricao' => 'descricao muito longa'
-        ],
-        2 =>[
-            'nome' => 'Lavagem de roupa',
-            'descricao' => 'descricao muito lonmga'
-        ],
-        3 =>[
-            'nome' => 'Lavagem de roupa',
-            'descricao' => 'descricao muito lonmga'
-        ],
-    ];
-
-    echo $servicos[$id]['nome'];
-    echo "<br>";
-    echo $servicos[$id]['descricao'];
-});
+Route::get('/servico/{id}', [SiteController::class, 'servico']);
 
 
 Route::get('/saudacoes/{nome}', function (string $nome = 'TreinaWeb') {
     echo "Ola $nome";
 });
-
