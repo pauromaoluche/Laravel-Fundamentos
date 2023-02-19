@@ -20,7 +20,14 @@
                     <td><a href="{{ route('client.show', $client) }}">{{ $client->nome }}</a></td>
                     <td>{{ $client->endereco }}</td>
                     <td>{{ $client->observacao }}</td>
-                    <td><a href="{{ route('client.edit', $client) }}">Editar</a></td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ route('client.edit', $client) }}">Editar</a>
+                    <form action="{{ route('client.destroy', $client) }}" method="POST" style="display: inline">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja apagar ?')">Apagar</button>
+                    </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

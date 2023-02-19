@@ -49,3 +49,6 @@ Route::post('/client', [ClientController::class, 'store'])->name('client.store')
 Route::get('/client/edit/{id}', [ClientController::class, 'edit'])->name('client.edit');
 //Enviando dados do client para o banco
 Route::put('/client/edit/{id}', [ClientController::class, 'update'])->name('client.update');
+
+//Deletando um cliente
+Route::delete('/client/{id}', [ClientController::class, 'destroy'])->name('client.destroy');
