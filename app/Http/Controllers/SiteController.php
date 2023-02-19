@@ -19,7 +19,6 @@ class SiteController extends Controller
     }
 
     public function servico(int $id){
-        echo "Estou mostrando o serviço com id $id";
 
         $servicos = [
             1 =>[
@@ -35,6 +34,11 @@ class SiteController extends Controller
                 'descricao' => 'descricao muito lonmga'
             ],
         ];
+
+        return view('servico', [
+            //Passamos um array, com base no id q passamos no url
+            'servico' => $servicos[$id]
+        ]);
     }
 
 
