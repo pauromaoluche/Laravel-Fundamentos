@@ -1,4 +1,9 @@
 --
+Comando para criar a migration
+    php artisan make:migration create_nometabela_table
+--
+
+--
 Comando para migrar o banco
     php artisan migrate
 --
