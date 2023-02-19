@@ -3,10 +3,11 @@
 @section('conteudo')
     <h1>Novo Cliente</h1>
 
-    <form>
+    <form action="{{ route('client.store') }}" method="POST">
+        @csrf
         <div class="mb-3">
             <label for="nome" class="form-label">Nome do Cliente</label>
-            <input type="text" class="form-control" id="nome" name="name" placeholder="Digite o nome do cliente">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do cliente">
         </div>
         <div class="mb-3">
             <label for="endereco" class="form-label">Endereço</label>

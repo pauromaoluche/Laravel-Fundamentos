@@ -41,3 +41,6 @@ Route::get('/client/create', [ClientController::class, 'create'])->name('client.
 
 //Pegando cliente em especifico
 Route::get('/client/{id}', [ClientController::class, 'show'])->name('client.show');
+
+//Pegando cliente em especifico
+Route::post('/client', [ClientController::class, 'store'])->name('client.store');
