@@ -34,4 +34,6 @@ Route::get('/servico/{id}', [SiteController::class, 'servico']);
 Route::get('/saudacao/{nome}', Saudacao::class);
 
 //Pega todos dados da table client
-Route::get('/clients', [ClientController::class, 'index']);
+Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
+//Pegando cliente em especifico
+Route::get('/client/{id}', [ClientController::class, 'show'])->name('client.show');
