@@ -35,5 +35,9 @@ Route::get('/saudacao/{nome}', Saudacao::class);
 
 //Pega todos dados da table client
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
+
+//Criando novo client
+Route::get('/client/create', [ClientController::class, 'create'])->name('client.create');
+
 //Pegando cliente em especifico
 Route::get('/client/{id}', [ClientController::class, 'show'])->name('client.show');

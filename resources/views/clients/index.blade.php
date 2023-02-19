@@ -2,6 +2,7 @@
 @section('title', 'Lista de clientes')
 @section('conteudo')
     <h1>Lista de clientes</h1>
+    <a href="{{ route('client.create') }}" type="button" class="btn btn-primary mt-3 mb-3">Criar novo cliente</a>
     <table class="table">
         <thead>
             <tr>
