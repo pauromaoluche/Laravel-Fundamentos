@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Saudacao;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,4 @@ Route::get('/contato', [SiteController::class, 'contato']);
 Route::get('/servico/{id}', [SiteController::class, 'servico']);
 
 
-Route::get('/saudacoes/{nome}', function (string $nome = 'TreinaWeb') {
-    echo "Ola $nome";
-});
+Route::get('/saudacao/{nome}', Saudacao::class);

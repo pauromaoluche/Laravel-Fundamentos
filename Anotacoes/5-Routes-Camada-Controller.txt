@@ -1,4 +1,9 @@
 --
-Comando para criara controller
+Comando para criar controller
     php artisan make:controller nomecontrolle
+--
+
+--
+Comando para criar Single Action Controller
+    php artisan make:controller Saudacao --invokable
 --
