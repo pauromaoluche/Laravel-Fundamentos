@@ -10,6 +10,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Endereço</th>
                 <th scope="col">Observação</th>
+                <th scope="col">Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                     <td><a href="{{ route('client.show', $client) }}">{{ $client->nome }}</a></td>
                     <td>{{ $client->endereco }}</td>
                     <td>{{ $client->observacao }}</td>
+                    <td><a href="{{ route('client.edit', $client) }}">Editar</a></td>
                 </tr>
             @endforeach
         </tbody>

@@ -42,5 +42,10 @@ Route::get('/client/create', [ClientController::class, 'create'])->name('client.
 //Pegando cliente em especifico
 Route::get('/client/{id}', [ClientController::class, 'show'])->name('client.show');
 
-//Pegando cliente em especifico
+//Enviando dados do client para o banco
 Route::post('/client', [ClientController::class, 'store'])->name('client.store');
+
+//Pegando cliente em especifico para editar
+Route::get('/client/edit/{id}', [ClientController::class, 'edit'])->name('client.edit');
+//Enviando dados do client para o banco
+Route::put('/client/edit/{id}', [ClientController::class, 'update'])->name('client.update');
