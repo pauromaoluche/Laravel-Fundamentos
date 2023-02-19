@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\Saudacao;
 use App\Http\Controllers\SiteController;
 use App\Models\Client;
@@ -33,6 +34,4 @@ Route::get('/servico/{id}', [SiteController::class, 'servico']);
 Route::get('/saudacao/{nome}', Saudacao::class);
 
 //Pega todos dados da table client
-Route::get('/clients', function(){
-    dd(Client::get());
-});
+Route::get('/clients', [ClientController::class, 'index']);
