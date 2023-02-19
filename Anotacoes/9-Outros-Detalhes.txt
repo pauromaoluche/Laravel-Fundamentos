@@ -1,0 +1,6 @@
+--
+Comando para criar resource controller que gera ja um crud
+    php artisan make:controller nomeController --resource
+--
+
+

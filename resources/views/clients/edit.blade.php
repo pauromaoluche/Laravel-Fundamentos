@@ -3,7 +3,7 @@
 @section('conteudo')
     <h1>Editando cliente {{ $client->nome }}</h1>
 
-    <form action="{{ route('client.update', $client) }}" method="POST">
+    <form action="{{ route('clients.update', $client) }}" method="POST">
         @csrf
         @method('put')
         <div class="mb-3">
