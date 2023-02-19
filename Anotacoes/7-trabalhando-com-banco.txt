@@ -7,3 +7,8 @@ Comando para criar a migration
 Comando para migrar o banco
     php artisan migrate
 --
+
+--
+Comando para criar models
+    php artisan make:model nomeTabelaNoSingular
+--
